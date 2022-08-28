@@ -35,9 +35,13 @@ function Listing() {
                 score: 4.5
             };
 
+    const handdlePageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
+
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handdlePageChange}/>
 
             <div className="container">
                 <div className="row">
